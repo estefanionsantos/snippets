@@ -1,0 +1,262 @@
+#
+# @import
+snippet @i
+	@import url("${1}") ${2:all};
+#
+# @media
+snippet @m
+	@media ${1:screen}
+	{
+		${2}
+	}
+#
+# @media min
+snippet @mn
+	@media only screen and (min-width: ${1:768px}) 
+	{
+			${2}
+	}
+#
+# @media min
+snippet @mx
+	@media only screen and (max-width: ${1:768px}) 
+	{
+				${2}
+	}
+#
+# @media screen and (min-width : 321px)
+snippet @mq
+	@media ${1:screen} and (min-width: ${2:768px})
+	{
+		${3}
+	}
+#
+# webkit-based browsers
+snippet @mwk
+	@media screen and (-webkit-min-device-pixel-ratio:0) 
+	{  
+	/* 
+	 * CSS Statements that only apply 
+	 * on webkit-based browsers 
+	 * (Chrome, Safari, etc.)
+	 */  
+		${1}
+	}
+#
+# round edge
+snippet rd
+	-webkit-border-radius: ${1:6}px;
+	-moz-border-radius: $1px;
+	border-radius: $1px;
+#
+# round edge at the top
+snippet rd_t
+	-webkit-border-top-left-radius: ${1:6}px;
+	-webkit-border-top-right-radius: $1px;
+	-moz-border-radius-topleft: $1px;
+	-moz-border-radius-topright: $1px;
+	border-top-left-radius: $1px;
+	border-top-right-radius: $1px;
+#
+# round edge at the bottom
+snippet rd_b
+	-webkit-border-bottom-right-radius: ${1:6}px;
+	-webkit-border-bottom-left-radius: $1px;
+	-moz-border-radius-bottomright: $1px;
+	-moz-border-radius-bottomleft: $1px;
+	border-bottom-right-radius: $1px;
+	border-bottom-left-radius: $1px;
+#
+# round edge at the right
+snippet rd_r
+	-webkit-border-top-right-radius: ${1:6}px;
+	-webkit-border-bottom-right-radius: $1px;
+	-moz-border-radius-topright: $1px;
+	-moz-border-radius-bottomright: $1px;
+	border-top-right-radius: $1px;
+	border-bottom-right-radius: $1px;
+#
+# round edge at the left
+snippet rd_l
+	-webkit-border-top-left-radius: ${1:6}px;
+	-webkit-border-bottom-left-radius: $1px;
+	-moz-border-radius-topleft: $1px;
+	-moz-border-radius-bottomleft: $1px;
+	border-top-left-radius: $1px;
+	border-bottom-left-radius: $1px;
+#
+# round edge
+snippet rd_circle
+	-webkit-border-radius: 500%;
+	-moz-border-radius: 500%;
+	border-radius: 500%
+#
+#
+snippet rd_polaroid
+	background-color:#fff;
+	border: 1px solid rgba(0,0,0,0.2);
+	box-shadow:0 1px 3px rgba(0,0,0,0.1);
+	padding: $1px
+#
+# shadow inner
+snippet shadow_inner	
+	moz-box-shadow: inset 2px 0 4px #000;  
+	-webkit-box-shadow: inset 2px 0 4px #000;  
+	box-shadow: inset 2px 0 4px #000;  
+#
+# shadow outerr
+snippet shadow_outer
+	-webkit-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.52);  
+	-moz-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.52);  
+	box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.52); 
+#
+# anchor link Pseudo class
+snippet anchor_link
+	a:link{ color: ${1:#09c} }
+	a:visited { color: ${2:#ffc} }
+	a:hover { color: ${3:#c00} }
+	a:active { color: ${4:#060} }
+#
+# Cross-Browser Transparency
+snippet alpha
+	filter: alpha(opacity=${1:5}0); /* internet explorer */  
+	-khtml-opacity: 0.$1;      /* khtml, old safari */  
+	-moz-opacity: 0.$1;       /* mozilla, netscape */  
+	opacity: 0.$1;           /* fx, safari, opera */
+#
+# Min width: Genareal Media Queries
+snippet @mnq
+	@media only screen and (min-width: 550px)
+	{
+
+	}
+
+	@media only screen and (min-width: 719px)
+	{
+
+	}
+
+	@media only screen and (min-width: 890px)
+	{
+
+	}
+
+	@media only screen and (min-width: 1221px)
+	{
+
+	}
+#
+# Max width: Genareal Media Queries
+snippet @mxq
+	@media only screen and (max-width: 1221px) 
+	{
+			
+	}
+	
+	@media only screen and (max-width: 890px) 
+	{
+			
+	}
+	
+	@media only screen and (max-width: 719px) 
+	{
+			
+	}
+	
+	@media only screen and (max-width: 550px)
+	{
+			
+	}
+#
+# Genareal Media Queries
+snippet @mgq
+	/** Smartphones (portrait and landscape) ----------- */  
+	@media only screen and (min-device-width : 320px) and (max-device-width : 480px) 
+	{  
+		/* Styles */  
+	}  
+
+	/** Smartphones (landscape) ----------- */  
+	@media only screen and (min-width : 321px) 
+	{  
+		/* Styles */  
+	}  
+
+	/** Smartphones (portrait) ----------- */  
+	@media only screen and (max-width : 320px) 
+	{  
+		/* Styles */  
+	}  
+
+	/** iPads (portrait and landscape) ----------- */  
+	@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) 
+	{  
+		/* Styles */  
+	}  
+
+	/** iPads (landscape) ----------- */  
+	@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) 
+	{  
+		/* Styles */  
+	}  
+
+	/** iPads (portrait) ----------- */  
+	@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) 
+	{  
+		/* Styles */  
+	}  
+
+	/** Desktops and laptops ----------- */  
+	@media only screen and (min-width : 1224px) 
+	{  
+		/* Styles */  
+	}  
+
+	/** Large screens ----------- */  
+	@media only screen and (min-width : 1824px) 
+	{  
+		/* Styles */  
+	}  
+
+	/** iPhone 4 ----------- */  
+	@media only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min-device-pixel-ratio:1.5) 
+	{  
+		/* Styles */  
+	} 
+#
+# class load bar
+snippet load_bar
+	 /* HTML: <div class="load_bar_format"></div> */
+	.load_bar_format {
+	  width: 45px;
+	  aspect-ratio: 1;
+	  --c: no-repeat linear-gradient(#000 0 0);
+	  background:
+	    var(--c) 0%   50%,
+	    var(--c) 50%  50%,
+	    var(--c) 100% 50%;
+	  background-size: 20% 100%;
+	  animation: lbfmt 1s infinite linear;
+	}
+	@keyframes lbfmt {
+	  0%  {background-size: 20% 100%,20% 100%,20% 100%}
+	  33% {background-size: 20% 10% ,20% 100%,20% 100%}
+	  50% {background-size: 20% 100%,20% 10% ,20% 100%}
+	  66% {background-size: 20% 100%,20% 100%,20% 10% }
+	  100%{background-size: 20% 100%,20% 100%,20% 100%}
+	}
+#
+# class load spinner
+snippet load_spinner
+	/* HTML: <div class="load_spinner_format"></div> */
+	.load_spinner_format {
+	  width: 50px;
+	  aspect-ratio: 1;
+	  border-radius: 50%;
+	  border: 8px solid #ccc;
+	  border-right-color: #000;
+	  animation: lsfmt 1s infinite linear;
+	}
+	@keyframes lsfmt {to{transform: rotate(1turn)}}
+#
+# EOF
